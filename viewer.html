@@ -32,6 +32,8 @@ See https://github.com/adobe-type-tools/cmap-resources
   <link rel="stylesheet" href="viewer.css">
 
   <script>
+
+    // base 64 함수 추가
     var Base64 = {
       // private property
       _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
@@ -587,5 +589,24 @@ See https://github.com/adobe-type-tools/cmap-resources
   </div> <!-- outerContainer -->
   <div id="printContainer"></div>
 </body>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var elementPrint = document.getElementsByClassName('print');
+
+    // print 아이콘 숨기기
+    for (var i = 0; i < elementPrint.length; i++) {
+      elementPrint[i].style.display = 'none';
+    }
+
+    // download 아이콘 숨기기
+    var elementDownload = document.getElementsByClassName('download');
+
+    for (var i = 0; i < elementDownload.length; i++) {
+      elementDownload[i].style.display = 'none';
+    }
+  });
+</script>
 
 </html>
