@@ -2038,6 +2038,7 @@
                 var params = (0, _ui_utils.parseQueryString)(queryString);
                 file = "file" in params ? params.file : _app_options.AppOptions.get("defaultUrl");
 
+                // 파라미터 암호화 용도, base 64 처리
                 var p = "p" in params ? params.p : null;
                 if (p != null) {
                     file = Base64.decode(p).replace(/%2F/g, "/").replace(/%3A/g, ":");
